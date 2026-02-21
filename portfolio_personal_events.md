@@ -238,27 +238,20 @@ API тестирование
    Скриншот бага: [https://printskrin.ru/i/OTcOO8](https://printskrin.ru/i/ONQhsU)
 
 5\. BUG — Скриншот бага:
- ![](/api/attachments.redirect?id=a89b8e85-1e5e-4610-9b29-04a3bca9a7a0 "aspect=1")
-- Ссылка на баг-репорт: 
-  <https://kerlanov.atlassian.net/browse/SCRUM-5?atlOrigin=eyJpIjoiMmRkYmY1OTBlMjJkNGZjYmExMmZlNTQ4MDM3NDViM2QiLCJwIjoiaiJ9>
-   ![](/api/attachments.redirect?id=2e14bfc7-cdb3-4c76-af6c-2f95f69a64c3 "aspect=0.9255952380952384")
+<img width="1263" height="741" alt="image" src="https://github.com/user-attachments/assets/45ef7493-0d41-44a5-b1be-ca70810cf1d7" />
+<img width="814" height="828" alt="image" src="https://github.com/user-attachments/assets/ac451b96-3188-4826-9772-9fb88a828333" />
 
 6\. BUG — Скриншот бага 
- ![](/api/attachments.redirect?id=b68e66a3-9d44-4fc9-ade5-794dff6b8d33 "aspect=1")
-Ссылка на баг-репорт <https://kerlanov.atlassian.net/browse/SCRUM-6?atlOrigin=eyJpIjoiZjkxMWE1NDFiOGJmNDQyNjhlZDVjMDZmMWU0NWNiZTUiLCJwIjoiaiJ9>
- ![](/api/attachments.redirect?id=b2ae86e9-56e9-4200-829a-4f2454333145 "aspect=1")
+<img width="1160" height="788" alt="image" src="https://github.com/user-attachments/assets/8b76417c-e72b-45ad-bb01-7e06096a825e" />
+<img width="360" height="771" alt="image" src="https://github.com/user-attachments/assets/3fd735b8-8d62-47c4-ac7d-9121f30bdc88" />
  
 7\. BUG — Скриншот бага:
- ![](/api/attachments.redirect?id=778c2d73-ee13-4ee5-9dab-4975491fada0 "aspect=1")
-ссылка на баг-репорт:
-<https://kerlanov.atlassian.net/browse/SCRUM-7?atlOrigin=eyJpIjoiYWQyMWExZTFlY2Y1NDRiODk1ZDI4NzU2ZDdmMmUyNzciLCJwIjoiaiJ9>
- ![](/api/attachments.redirect?id=c3885eb0-8bd7-48f8-bcc7-5cbee002d616 "aspect=1")
- 
+<img width="1181" height="787" alt="image" src="https://github.com/user-attachments/assets/8f0bbd10-fa20-4756-b574-f85b5cd9a9c3" />
+<img width="368" height="678" alt="image" src="https://github.com/user-attachments/assets/8f14253b-f81a-4ba0-9463-6fa67c333906" />
+
 8\. BUG — Скриншот бага:
- ![](/api/attachments.redirect?id=2091443d-6135-4241-81c7-1e1079483156 "aspect=1")
-ссылка на баг репорт:
-<https://kerlanov.atlassian.net/browse/SCRUM-8?atlOrigin=eyJpIjoiNzg0M2MyMTlmNjhlNGE2OWI4NGM0NzE0MmRmNjkwOGUiLCJwIjoiaiJ9>
- ![](/api/attachments.redirect?id=65e5e15d-d539-446a-bc28-5295bc830ada "aspect=1")
+<img width="1336" height="861" alt="image" src="https://github.com/user-attachments/assets/5483d824-cd1b-4e7d-8105-051e3dcc3f75" />
+<img width="364" height="660" alt="image" src="https://github.com/user-attachments/assets/620856df-28d4-4f12-a3f4-a483eb65e0b4" />
 
 ## *5. Выводы и рекомендации:*
 
