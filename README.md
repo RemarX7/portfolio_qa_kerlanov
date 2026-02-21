@@ -1,4 +1,4 @@
-## <h1> Моё портфолио </h1>
+<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/7d58697c-c9d4-4d5d-83b7-fad3f2873450" />## <h1> Моё портфолио </h1>
 
 <h2> Тест-план: "Личное Событие". </h2>
 
@@ -85,11 +85,14 @@
 - Проверка поля “название события” в категории “личное событие”. 
 - Позитивные и негативные проверки
 
- ![](/api/attachments.redirect?id=f63952ea-ce2e-4342-a571-04f10056b454 "aspect=1")
+<img width="1170" height="2050" alt="image" src="https://github.com/user-attachments/assets/907ac714-4c2a-426f-bc1a-5edabb10af4b" />
+
 
 ### 4.3 Регрессионное тестирование
 
 Скриншот регрессионного высокоуровневого чек-листа из sitechco.ru
+
+<img width="1170" height="611" alt="image" src="https://github.com/user-attachments/assets/eba74dfb-525a-4387-aa74-5b79ef841ecb" />
 
 - Создание/редактирование/удаление личного события
 - Изменение даты события
@@ -186,19 +189,23 @@ https://api-teachers.skyeng.ru
 - Создание личного события через клик на слот.
 - Редактирование личного события.
 
- ![](/api/attachments.redirect?id=302b534d-e281-434a-8e60-a5869db389c2 "aspect=1")
+<img width="1607" height="793" alt="image" src="https://github.com/user-attachments/assets/d841cff1-02e7-407d-9b79-79d414700ff0" />
+
 
 Низкоуровневый функциональный чек-лист
 
- ![](/api/attachments.redirect?id=d0df6445-0982-4f7f-b698-d67c131dafc6 "aspect=1")
+<img width="1170" height="1875" alt="image" src="https://github.com/user-attachments/assets/f1b017a9-9f97-4a01-9b82-65774940fa38" />
+
 
 Регрессионный высокоуровневый чек-лист 
 
- ![](/api/attachments.redirect?id=3ae59088-7e36-4c51-92b9-e081e3cb63f0 "aspect=1")
+<img width="1170" height="660" alt="image" src="https://github.com/user-attachments/assets/a0ec7b68-d215-4723-bb7f-f854c57d6776" />
+
 
 Приёмочное тестирование
 
- ![](/api/attachments.redirect?id=0b119cf8-b438-47cd-b030-4cd68954b568 "aspect=1")
+<img width="1604" height="792" alt="image" src="https://github.com/user-attachments/assets/7f5dc9ae-2d01-4a15-b501-c8ada1813e34" />
+
 
 API тестирование
 
@@ -209,7 +216,8 @@ API тестирование
 
 Сводная таблица со скриншотами баг-репортов и диаграмма по найденным дефектам:
 
- ![](/api/attachments.redirect?id=8b6de698-9e74-4438-bc6e-1f721574d73a "aspect=0.7456647398843932")
+ <img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/574780a5-f64e-426a-84c1-d89d56d73338" />
+
 
 | ID  | Название (кликабельно, ссылка на скрин  бага) | Приоритет | Серьёзность |
 |:---:|:---:|:---:|:---:|
@@ -224,52 +232,38 @@ API тестирование
 | BUG 8 | 8. Отсутствие валидации по длительности личного события при его создании | Средний | S3 |
 
 1. BUG — <https://printskrin.ru/i/OTcOO8>
-
    Скриншот бага: <https://printskrin.ru/i/OTwvB8>
-2. BUG — <https://printskrin.ru/i/OTcM2Y>
-
+   
+3. BUG — <https://printskrin.ru/i/OTcM2Y>
    Скриншот бага: <https://printskrin.ru/i/OTD2zq>
-3. BUG — <https://printskrin.ru/i/OTcN6b>
-
+   
+4. BUG — <https://printskrin.ru/i/OTcN6b>
    Скриншот бага: <https://printskrin.ru/i/ONQpgN>
-4. BUG — <https://printskrin.ru/i/OTcgVH>  
-
+   
+5. BUG — <https://printskrin.ru/i/OTcgVH>  
    Скриншот бага: [https://printskrin.ru/i/OTcOO8](https://printskrin.ru/i/ONQhsU)
 
 5\. BUG — Скриншот бага:
-
  ![](/api/attachments.redirect?id=a89b8e85-1e5e-4610-9b29-04a3bca9a7a0 "aspect=1")
-
 - Ссылка на баг-репорт: 
   <https://kerlanov.atlassian.net/browse/SCRUM-5?atlOrigin=eyJpIjoiMmRkYmY1OTBlMjJkNGZjYmExMmZlNTQ4MDM3NDViM2QiLCJwIjoiaiJ9>
-
    ![](/api/attachments.redirect?id=2e14bfc7-cdb3-4c76-af6c-2f95f69a64c3 "aspect=0.9255952380952384")
 
 6\. BUG — Скриншот бага 
-
  ![](/api/attachments.redirect?id=b68e66a3-9d44-4fc9-ade5-794dff6b8d33 "aspect=1")
-
 Ссылка на баг-репорт <https://kerlanov.atlassian.net/browse/SCRUM-6?atlOrigin=eyJpIjoiZjkxMWE1NDFiOGJmNDQyNjhlZDVjMDZmMWU0NWNiZTUiLCJwIjoiaiJ9>
-
  ![](/api/attachments.redirect?id=b2ae86e9-56e9-4200-829a-4f2454333145 "aspect=1")
-
+ 
 7\. BUG — Скриншот бага:
-
  ![](/api/attachments.redirect?id=778c2d73-ee13-4ee5-9dab-4975491fada0 "aspect=1")
-
 ссылка на баг-репорт:
 <https://kerlanov.atlassian.net/browse/SCRUM-7?atlOrigin=eyJpIjoiYWQyMWExZTFlY2Y1NDRiODk1ZDI4NzU2ZDdmMmUyNzciLCJwIjoiaiJ9>
-
-
  ![](/api/attachments.redirect?id=c3885eb0-8bd7-48f8-bcc7-5cbee002d616 "aspect=1")
-
+ 
 8\. BUG — Скриншот бага:
-
  ![](/api/attachments.redirect?id=2091443d-6135-4241-81c7-1e1079483156 "aspect=1")
-
 ссылка на баг репорт:
 <https://kerlanov.atlassian.net/browse/SCRUM-8?atlOrigin=eyJpIjoiNzg0M2MyMTlmNjhlNGE2OWI4NGM0NzE0MmRmNjkwOGUiLCJwIjoiaiJ9>
-
  ![](/api/attachments.redirect?id=65e5e15d-d539-446a-bc28-5295bc830ada "aspect=1")
 
 ## *5. Выводы и рекомендации:*
@@ -279,7 +273,6 @@ API тестирование
 На основании результатов текущего тестирования на данном этапе выпуск продукта не представляется целесообразным. Основные требования функционируют корректно для двух стейкхолдеров — Марьи Ивановны и Кирилла Егоровича. Однако для Анастасии Петровны система не выполняет ключевые функции, указанные в платформах требований. Кроме того, в текущей версии отсутствует реализация некоторых требований, что потенциально может привести к ошибкам в базе данных и при работе с веб-формами. 
 
 Рекомендуется сосредоточиться на устранении высокоприоритетных и критических ошибок, после чего можно будет рассматривать повторное тестирование и возможный запуск. Важно обеспечить соответствие системы ожиданиям всех стейкхолдеров для успешного внедрения и дальнейшей работы.
-
 
 **Влияние дефектов на пользователей:** 
 
@@ -295,8 +288,6 @@ API тестирование
 
    **3) Путаница между типами событий** (если цвет — это категория).
 8.   В связи с отсутствием валидации по длительности событий может происходить **создание нереалистичных событий** (на год вперёд). Визуально к**алендарь будет с** гигантскими блоками (событиями) и возникнут **проблемы с визуализацией** в UI (не влезает на экран).
-
-     
 
 **Рекомендации:**
 
