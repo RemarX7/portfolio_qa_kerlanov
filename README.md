@@ -108,7 +108,7 @@
 
 Тест-кейсы. 
 
-[Skyeng.Вкладка_-Расписание-.postman_collection.json 84236](./testcases/Skyeng.%D0%92%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0_-%D0%A0%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-.postman_collection.json)
+[Postman_collection](./testcases/Skyeng.%D0%92%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0_-%D0%A0%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-.postman_collection.json)
 
 https://api-teachers.skyeng.ru  
 
