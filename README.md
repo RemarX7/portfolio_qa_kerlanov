@@ -1,4 +1,4 @@
-<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/7d58697c-c9d4-4d5d-83b7-fad3f2873450" />## <h1> Моё портфолио </h1>
+## <h1> Моё портфолио </h1>
 
 <h2> Тест-план: "Личное Событие". </h2>
 
