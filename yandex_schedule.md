@@ -1,3 +1,5 @@
+<h1> Тестирование API Яндекс.Расписания </h1>
+[Postman Collection](./testcases/%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81.%D0%A0%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D1%8F.%D0%9A%D0%B5%D1%80%D0%BB%D0%B0%D0%BD%D0%BE%D0%B2_%D0%90.%D0%90..postman_collection.json)
 Чтобы работать с API, необходимо получить Токен в Яндексе:
 
 Перейти на страницу разработчика https://developer.tech.yandex.ru/service
