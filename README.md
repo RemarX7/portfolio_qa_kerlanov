@@ -61,9 +61,9 @@
 Ссылка на декомпозицию в Miro: [Курсовая работа №1](https://miro.com/app/board/uXjVJzqRRu0=/)
 ## ***4. Виды тестирования***
 
-- [Smoke ТС 50. Создание личного события через клик на слот](.[/testcases/Smoke%20ТС%2050.%20Создание%20личного%20события%20через%20клик%20на%20слот.xlsx](https://github.com/RemarX7/RemarX7/blob/main/testcases/Smoke%20TC%2050_%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BB%D0%B8%D1%87%D0%BD%D0%BE%D0%B3%D0%BE%20%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F%20%D1%87%D0%B5%D1%80%D0%B5%D0%B7%20%D0%BA%D0%BB%D0%B8%D0%BA%20%D0%BD%D0%B0%20%D1%81%D0%BB%D0%BE%D1%82.xlsx))
-- [Smoke ТС 51. Создание личного события через клик на +](./testcases/Smoke%20ТС%2051.%20Создание%20личного%20события%20через%20клик%20на%20+.xlsx)
-- [Smoke ТС 52. Редактирование личного события](./testcases/Smoke%20ТС%2052.%20Редактирование%20личного%20события.xlsx)
+- [Smoke TC 50. Создание личного события через клик на слот](./testcases/Smoke%20TC%2050_%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BB%D0%B8%D1%87%D0%BD%D0%BE%D0%B3%D0%BE%20%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F%20%D1%87%D0%B5%D1%80%D0%B5%D0%B7%20%D0%BA%D0%BB%D0%B8%D0%BA%20%D0%BD%D0%B0%20%D1%81%D0%BB%D0%BE%D1%82.xlsx)
+- [Smoke TC 51. Создание личного события через клик на +](./testcases/Smoke%20TC%2051_%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BB%D0%B8%D1%87%D0%BD%D0%BE%D0%B3%D0%BE%20%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F%20%D1%87%D0%B5%D1%80%D0%B5%D0%B7%20%D0%BA%D0%BB%D0%B8%D0%BA%20%D0%BD%D0%B0%20+.xlsx)
+- [Smoke TC 52. Редактирование личного события](./testcases/Smoke%20TC%2052_%D0%A0%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BB%D0%B8%D1%87%D0%BD%D0%BE%D0%B3%D0%BE%20%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F.xlsx)
   
 Smoke TC 50. Создание личного события через клик на слот: 
 ### **4.1 Smoke тестирование**
