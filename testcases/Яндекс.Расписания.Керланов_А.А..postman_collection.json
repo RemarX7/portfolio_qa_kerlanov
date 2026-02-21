@@ -1,0 +1,547 @@
+{
+	"info": {
+		"_postman_id": "513387ed-5939-4247-87a4-9364a1e1bd46",
+		"name": "Яндекс.Расписания.Керланов_А.А. Copy",
+		"description": "---\n\n- _**Чтобы работать с API, необходимо получить Токен в Яндексе:**_\n    \n\n1. Перейти на страницу разработчика [https://developer.tech.yandex.ru/service](https://developer.tech.yandex.ru/services)\n    \n2. Зарегистрироваться, либо если есть аккаунт авторизироваться.\n    \n3. Нажать на кнопку \"Подключить API\".\n    \n4. Получить Ключ.\n    \n5. Зарегистрировать новое приложение, например AA_Kerlanov.\n    \n6. Скопировать сгенерированный ключ.\n    \n7. Зайти в постман и создать коллекцию \"Яндекс.Расписания.Керланов_А.А.\"\n    \n8. Перейти во вкладку Authorization.\n    \n9. Кликнуть по выпадающему списку и выбрать \"API Key\".\n    \n10. В поле Ключ ввести \"Autorization\".\n    \n11. В поле Значение ввести скопированный ключ (ctrl + v).\n    \n12. В поле \"Add to\" - выбрать \"header\".\n    \n13. В первом запросе (далее новые будут создаваться с помощью Duplicate и изменяться) в разделе \"Autorization\" выбрать \"Inherit auth from parent\" (это наследство с помощью которого теперь Постман в новом запросе будет сам брать ключ API из самой коллекции).\n    \n14. Так же необходимо добавить переменную 'apikey' со значением (Value) ключа API Яндекса, во вкладку Variables.\n    \n15. Теперь наша переменная будет применяться на всю коллекцию\n    \n16. Пройти процедуру активации ключа.\n    \n17. Использовать ключ в каждом запросе к API.\n    \n\n---\n\n- _**Какие использую переменные и для чего.**_\n    \n\n1. Для начала создам в коллекции переменную с названием {BasicURL} для удобства создания запросов последующем, чтобы не вводить каждый раз URL, а так же с помощью использования переменных в запросах повышаю безопасность (больше актуально для токенов). [https://api.rasp.yandex-net.ru/v3.0](https://api.rasp.yandex-net.ru/v3.0) - это BasicURL, основа URL'a.\n    \n2. В запросе \"Список станций следования\" требуется 'свежий' _**uid**_ из любого запроса из двух: \"1) расписание рейсов между станциями\" или \"2) расписание рейсов по станции\", по этому я создал динамическую переменную в запросе \"2)\" (скрипт, который записывает значение каждый раз когда мы выполняем запрос), вот он:\n    \n\n`var jsonData = pm.response.json();`\n\n`var uid = jsonData.schedule[0].thread.uid;`\n\n`pm.collectionVariables.set(\"uid\", uid);`\n\n`console.log(\"✅ UID сохранен:\", uid); // позволяет при нажатии ctrl + alt + c посмотреть успешность выполнения операции в консоле.`\n\n---\n\n- _**Какие запросы и скрипты включены в коллекцию.**_\n    \n\n1. _Расписание рейсов между станциями._\n    \n\n- _**Позитивный \\[GET\\] запрос**_\n    \n\n_**\\--URL**_\n\n[https://api.rasp.yandex-net.ru/v3.0](https://api.rasp.yandex-net.ru/v3.0)/search/?apikey=5b3a8aa5-90ff-4f51-9ec3-c15eab4da7b1&from=s2000005&to=s9616627\n\n_**\\--headers**_\n\nContent-Type: application/json\n\n_**\\--\\[Params\\]**_\n\n> `from = s2000005` \n  \n\nКод станции отправления \"Москва (Павелецкий вокзал)\"\n\n> `to = s9616627` \n  \n\nКод станции прибытия \"Симферополь-Пасс.\"\n\n_**\\--Authorization**_\n\nInherit auth from parent\n\n_**\\-- Скрипты**_\n\n`1)pm.test(\"Status code is 200\", function () {pm.response.to.have.status(200);});`\n\nПроверка успешности выполнения запроса (200) - значит ОК.\n\n`2)pm.test(\"Content-Type is present\", function () {pm.response.to.have.header(\"Content-Type\");});`\n\nЭтот тест проверяет, что сервер в своем ответе обязательно указывает заголовок Content-Type, который сообщает клиенту, в каком формате представлены данные.\n\n`3)pm.test(\"Тело ответа содержит искомый город Симферополь\", function () {pm.expect(pm.response.text()).to.include(\"Симферополь\");});`\n\nЭтот тест проверяет, что в тексте ответа от сервера упоминается город **Симферополь,** так как была задана в параметрах станция в данном городе.  \n`4)pm.test(\"Тело ответа содержит искомый город Москва\", function () {pm.expect(pm.response.text()).to.include(\"Москва\");});`\n\nАналогично с предыдущим тестом про Симферополь.\n\n`5)pm.test(\"Response time is less than 200ms\", function () {`\n\n`pm.expect(pm.response.responseTime).to.be.below(200);});`\n\nЭтот тест проверяет, что сервер отвечает достаточно быстро - менее чем за 200 миллисекунд.\n\n- _**Негативный \\[GET\\] запрос**_\n    \n\n\\--URL\n\n[https://api.rasp.yandex-net.ru/v3.0](https://api.rasp.yandex-net.ru/v3.0)/search/?apikey=5b3a8aa5-90ff-4f51-9ec3-c15eab4da7b1&from=c213&to=c213\n\n_**\\--\\[Params\\]**_\n\n> `from = c213` \n  \n\n\"Москва\"\n\n> `to = c213` \n  \n\nКод населенного пункта «c213» («c» от сокращенного «city»).\n\nСовпадают точка \"А\" и точка \"Б\" в запросе, система должна выдать ошибку 400.\n\n_**\\-- Скрипты (помимо проверки наличия Content-Type в ответе от сервера и скорости ответа (200 мс))**_\n\n`1)pm.test(\"Status code is 400\", function () {pm.response.to.have.status(400);});`\n\nДолжна быть ошибка на стороне клиента \"400\" (некорректные данные на ввод).\n\n---\n\n2\\. _Расписание рейсов по станции._\n\n- _**Позитивный \\[GET\\] запрос**_\n    \n\n\\--_**URL**_  \n[https://api.rasp.yandex-net.ru/v3.0](https://api.rasp.yandex-net.ru/v3.0)/schedule/?apikey=5b3a8aa5-90ff-4f51-9ec3-c15eab4da7b1&station=s9600213\n\n_**\\--headers**_\n\nContent-Type: application/json\n\n_**\\--\\[Params\\]**_\n\n> `station = s9600213` \n  \n\nКод станции Шереметьево\n\n_**\\-- Скрипты**_\n\n`1)var jsonData = pm.response.json(); var uid = jsonData.schedule[0].thread.uid; pm.collectionVariables.set(\"uid\", uid); console.log(\"✅ UID сохранен:\", uid);`\n\nДля сохранения новой переменной \"uid\" в коллекцию, она является динамической, так как значение может перезаписываться с каждым новым запросом.\n\n`2)pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); }); 3)pm.test(\"Response time is less than 200ms\", function () { pm.expect(pm.response.responseTime).to.be.below(200); });`\n\n`4)pm.test(\"Тело ответа содержит искомую станцию Шереметьево\", function () { pm.expect(pm.response.text()).to.include(\"Шереметьево\");`  \n});\n\nЭтот тест проверяет, что в тексте ответа от сервера упоминается станция **Шереметьево,** так как она была задана в параметрах при отправке запроса.\n\n- _**Негативный \\[GET\\] запрос**_\n    \n\nПроверка поведения системы на невалидные данные в запросе.\n\n_**\\--URL**_\n\n[https://api.rasp.yandex-net.ru/v3.0](https://api.rasp.yandex-net.ru/v3.0)/schedule/?apikey=5b3a8aa5-90ff-4f51-9ec3-c15eab4da7b1&station=\n\n\\--_**\\[Params\\]**_\n\n`station =`\n\nНет значения ключу.\n\n_**\\--Скрипты**_\n\n`1)pm.test(\"Status code is 400\", function () { pm.response.to.have.status(400);});`\n\nПроверка корректности обработки клиентской ошибки (400-ой) сервером.\n\n`2)pm.test(\"Response time is less than 200ms\", function () { pm.expect(pm.response.responseTime).to.be.below(200);});`\n\n`3)pm.test(\"Content-Type is present\", function () { pm.response.to.have.header(\"Content-Type\");});`\n\n---\n\n_3\\. Список станций следования_\n\n- _**Позитивный \\[GET\\] запрос**_\n    \n\n_**\\--URL**_\n\n[https://api.rasp.yandex-net.ru/v3.0/thread/?](https://api.rasp.yandex-net.ru/v3.0/thread/?uid=%7B%7Buid%7D%7D)apikey=5b3a8aa5-90ff-4f51-9ec3-c15eab4da7b1&[uid={{uid}}](https://api.rasp.yandex-net.ru/v3.0/thread/?uid=%7B%7Buid%7D%7D) (_**uid**_ значение ключа из переменной, созданной в позитивном запросе \"_Расписание рейсов по станции\")._\n\n_**\\--headers**_\n\nContent-Type: application/json\n\n_**\\--\\[Params\\]**_\n\n> `uid = {{uid}} // (из переменной)` \n  \n\nЭто идентификатор нитки в Яндекс Расписаниях. Идентификатор нитки может меняться со временем. Поэтому перед каждым запросом станций нитки необходимо получать актуальный идентификатор запросом расписания рейсов между станциями или расписания рейсов по станции.\n\n_**\\-- Скрипты**_\n\n`1)pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200);});`\n\n`2)pm.test(\"Тело ответа содержит дни отправки со станции\", function () {pm.expect(pm.response.text()).to.include(\"days\");});`\n\nПоверхностно, но проверяем, содержится ли строка \"days\" в ответе от сервера - дни отправки транспорта по календарю.\n\n`3)pm.test(\"Response time is less than 200ms\", function () { pm.expect(pm.response.responseTime).to.be.below(200);});`\n\n- _**Негативный \\[GET\\] запрос**_\n    \n\n_**\\--URL**_\n\n[https://api.rasp.yandex-net.ru/v3.0/thread/?](https://api.rasp.yandex-net.ru/v3.0/thread/?uid=)apikey=5b3a8aa5-90ff-4f51-9ec3-c15eab4da7b1&[uid=](https://api.rasp.yandex-net.ru/v3.0/thread/?uid=) (_**uid**_ здесь не указываем)\n\n_**\\--\\[Params\\]**_\n\nОставляем key = uid, но удаляем value (значение) = ~~{{uid}}~~\n\n_**\\-- Скрипты**_\n\n`1)pm.test(\"Status code is 400\", function () { pm.response.to.have.status(400); });`\n\nПроверка корректности обработки невалидных данных сервером, ожидаем 400 ошибку, так как ошибка в запросе, например в параметрах.`2)pm.test(\"Response time is less than 200ms\", function () { pm.expect(pm.response.responseTime).to.be.below(200); });`\n\n---\n\n_4\\. Список ближайших станций_\n\n- _**Позитивный \\[GET\\] запрос**_\n    \n\n_**\\--URL**_\n\n[https://api.rasp.yandex-net.ru/v3.0](https://api.rasp.yandex-net.ru/v3.0/thread/?uid=)/nearest_stations/?apikey=5b3a8aa5-90ff-4f51-9ec3-c15eab4da7b1&lat=50.440046&lng=40.4882367&distance=50  \n_**\\--\\[Params\\]**_\n\n> `lat = 50.440046`  \nШирота согласно WGS84 \n  \n> `lng = 40.4882367`  \nДолгота согласно WGS84. \n  \n> `distanse = 50`  \nРадиус, в котором следует искать станции, в километрах. \n  \n\n_**\\-- Скрипты**_\n\n`1)pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });`\n\nОжидаем успешное выполнение запроса`2)pm.test(\"Тело ответа содержит Павловск (ближайшую станцию)\", function () { pm.expect(pm.response.text()).to.include(\"Павловск\"); });`\n\nТело ответа по-любому должно содержать станцию \"Павловск\", в соответствии с заданными координатами в параметрах при запросе. Проверим, действительно ли система корректно обрабатывает вводные данные.`3)pm.test(\"Response time is less than 200ms\", function () { pm.expect(pm.response.responseTime).to.be.below(200); });`\n\n- _**Негативный \\[GET\\] запрос**_\n    \n\n_**\\--URL**_\n\n[https://api.rasp.yandex-net.ru/v3.0](https://api.rasp.yandex-net.ru/v3.0/thread/?uid=)/nearest_stations/?apikey=5b3a8aa5-90ff-4f51-9ec3-c15eab4da7b1&lat=50.440046&lng=9999999&distance=50\n\n_**\\--\\[Params\\]**_\n\n> `lat = 50.440046`  \nШирота согласно WGS84 \n  \n> `lng = 9999999`  \nНевалидные данные долготы. \n  \n> `distanse = 50`  \nРадиус, в котором следует искать станции, в километрах. \n  \n\n_**\\-- Скрипты**_\n\n`1)pm.test(\"Status code is 400\", function () { pm.response.to.have.status(400); });`\n\nОжидаем 400 ошибку, невалидные данные (нужно исправить на валидные)`2)pm.test(\"Response time is less than 200ms\", function () { pm.expect(pm.response.responseTime).to.be.below(200); });`",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50987516",
+		"_collection_link": "https://zippo5491-com-5826617.postman.co/workspace/Testing-skypro~d374cd03-592b-4cff-ae37-851658ebc99e/collection/50987516-513387ed-5939-4247-87a4-9364a1e1bd46?action=share&source=collection_link&creator=50987516"
+	},
+	"item": [
+		{
+			"name": "Расписание рейсов между станциями",
+			"item": [
+				{
+					"name": "[Позитивный]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"pm.test(\"Тело ответа содержит искомый город Симферополь\", function () {\r",
+									"pm.expect(pm.response.text()).to.include(\"Симферополь\");\r",
+									"});\r",
+									"pm.test(\"Тело ответа содержит искомый город Москва\", function () {\r",
+									"pm.expect(pm.response.text()).to.include(\"Москва\");\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{apikey}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BasicURL}}/search/?apikey={{apikey}}&from=s2000005&to=s9616627",
+							"host": [
+								"{{BasicURL}}"
+							],
+							"path": [
+								"search",
+								""
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "{{apikey}}"
+								},
+								{
+									"key": "from",
+									"value": "s2000005"
+								},
+								{
+									"key": "to",
+									"value": "s9616627"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[Негативный]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BasicURL}}/search/?apikey={{apikey}}&from=c213&to=c213",
+							"host": [
+								"{{BasicURL}}"
+							],
+							"path": [
+								"search",
+								""
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "{{apikey}}"
+								},
+								{
+									"key": "from",
+									"value": "c213"
+								},
+								{
+									"key": "to",
+									"value": "c213"
+								}
+							]
+						},
+						"description": "Город отправления совпадает с городом прибытия."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Расписание рейсов по станции",
+			"item": [
+				{
+					"name": "[Позитивный]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"var uid = jsonData.schedule[0].thread.uid;\r",
+									"pm.collectionVariables.set(\"uid\", uid);\r",
+									"console.log(\"✅ UID сохранен:\", uid);\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"pm.test(\"Тело ответа содержит искомую станцию Шереметьево\", function () {\r",
+									"pm.expect(pm.response.text()).to.include(\"Шереметьево\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BasicURL}}/schedule/?apikey={{apikey}}&station=s9600213",
+							"host": [
+								"{{BasicURL}}"
+							],
+							"path": [
+								"schedule",
+								""
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "{{apikey}}"
+								},
+								{
+									"key": "station",
+									"value": "s9600213"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[Негативный]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BasicURL}}/schedule/?apikey={{apikey}}&station=",
+							"host": [
+								"{{BasicURL}}"
+							],
+							"path": [
+								"schedule",
+								""
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "{{apikey}}"
+								},
+								{
+									"key": "station",
+									"value": ""
+								}
+							]
+						},
+						"description": "Некорректный метод (POST) вместо (GET)."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Список станций следования",
+			"item": [
+				{
+					"name": "[Позитивный]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Тело ответа содержит дни отправки со станции\", function () {\r",
+									"pm.expect(pm.response.text()).to.include(\"days\");\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BasicURL}}/thread/?apikey={{apikey}}&uid={{uid}}",
+							"host": [
+								"{{BasicURL}}"
+							],
+							"path": [
+								"thread",
+								""
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "{{apikey}}"
+								},
+								{
+									"key": "uid",
+									"value": "{{uid}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[Негативный]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BasicURL}}/thread/?apikey={{apikey}}&uid=",
+							"host": [
+								"{{BasicURL}}"
+							],
+							"path": [
+								"thread",
+								""
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "{{apikey}}"
+								},
+								{
+									"key": "uid",
+									"value": "",
+									"description": "\n"
+								}
+							]
+						},
+						"description": "Не указан uid"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Список ближайших станций",
+			"item": [
+				{
+					"name": "[Позитивный]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Тело ответа содержит Павловск (ближайшую станцию)\", function () {\r",
+									"pm.expect(pm.response.text()).to.include(\"Павловск\");\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BasicURL}}/nearest_stations/?apikey={{apikey}}&lat=50.440046&lng=40.4882367&distance=50",
+							"host": [
+								"{{BasicURL}}"
+							],
+							"path": [
+								"nearest_stations",
+								""
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "{{apikey}}"
+								},
+								{
+									"key": "lat",
+									"value": "50.440046"
+								},
+								{
+									"key": "lng",
+									"value": "40.4882367"
+								},
+								{
+									"key": "distance",
+									"value": "50"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[Негативный]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BasicURL}}/nearest_stations/?apikey={{apikey}}&lat=50.440046&lng=9999999&distance=50",
+							"host": [
+								"{{BasicURL}}"
+							],
+							"path": [
+								"nearest_stations",
+								""
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "{{apikey}}"
+								},
+								{
+									"key": "lat",
+									"value": "50.440046"
+								},
+								{
+									"key": "lng",
+									"value": "9999999"
+								},
+								{
+									"key": "distance",
+									"value": "50"
+								}
+							]
+						},
+						"description": "Ввод некорректного параметра."
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{apikey}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BasicURL",
+			"value": "https://api.rasp.yandex-net.ru/v3.0"
+		},
+		{
+			"key": "uid",
+			"value": "N4-551_260217_c2543_12"
+		},
+		{
+			"key": "apikey",
+			"value": "5b3a8aa5-90ff-4f51-9ec3-c15eab4da7b1"
+		}
+	]
+}
