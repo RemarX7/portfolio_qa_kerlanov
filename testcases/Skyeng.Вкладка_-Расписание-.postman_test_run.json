@@ -1,0 +1,1613 @@
+{
+	"id": "ce27c6a6-66f0-4091-a846-50de55d32edf",
+	"name": "Skyeng.Вкладка_\"Расписание\"",
+	"timestamp": "2026-01-28T11:39:21.163Z",
+	"collection_id": "50987516-c5232026-3a18-4a34-973b-829e4796898b",
+	"folder_id": 0,
+	"environment_id": "50987516-89117b50-f8b4-426a-9fb4-197a1ad4b02e",
+	"totalPass": 87,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2026-01-28T11:38:04.032Z",
+	"totalFail": 24,
+	"results": [
+		{
+			"id": "592e3e64-ca52-4d37-a8ac-f9716fd10573",
+			"name": "[01]Создание личного события в следующем месяце",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/createPersonal",
+			"time": 255,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 (OK)": true,
+				"eventId saved to variable": true,
+				"startAt saved to variable": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 (OK)": {
+					"pass": 1,
+					"fail": 0
+				},
+				"eventId saved to variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"startAt saved to variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				255
+			],
+			"allTests": [
+				{
+					"Status code is 200 (OK)": true,
+					"eventId saved to variable": true,
+					"startAt saved to variable": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "e4683e1d-e6d0-46c9-a15f-2ca68ddbb444",
+			"name": "Получение расписания за следующий месяц",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/events",
+			"time": 531,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 300ms": false,
+				"Событие в расписании": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 300ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Событие в расписании": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				531
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 300ms": false,
+					"Событие в расписании": true
+				}
+			]
+		},
+		{
+			"id": "b3f582c1-0be5-406e-b675-76e6d21b7b75",
+			"name": "[02]Создание личного события в предыдущем месяце",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/createPersonal",
+			"time": 195,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 (OK)": true,
+				"eventId saved to variable": true,
+				"startAt saved to variable": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 (OK)": {
+					"pass": 1,
+					"fail": 0
+				},
+				"eventId saved to variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"startAt saved to variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				195
+			],
+			"allTests": [
+				{
+					"Status code is 200 (OK)": true,
+					"eventId saved to variable": true,
+					"startAt saved to variable": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "f626079a-ec64-410a-879c-41678ef4f491",
+			"name": "Получение расписания за предыдущий месяц",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/events",
+			"time": 467,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 300ms": false,
+				"Событие в расписании": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 300ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Событие в расписании": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				467
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 300ms": false,
+					"Событие в расписании": true
+				}
+			]
+		},
+		{
+			"id": "5d4f52a4-71a9-4d9c-be92-3ffa714090b7",
+			"name": "[03]Создание личного события в текущем времени",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/createPersonal",
+			"time": 156,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 (OK)": true,
+				"eventId saved to variable": true,
+				"startAt saved to variable": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 (OK)": {
+					"pass": 1,
+					"fail": 0
+				},
+				"eventId saved to variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"startAt saved to variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				156
+			],
+			"allTests": [
+				{
+					"Status code is 200 (OK)": true,
+					"eventId saved to variable": true,
+					"startAt saved to variable": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "7b649665-86ab-48f2-8d31-d0f8e2c79f2a",
+			"name": "Получение расписания для текущего времени",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/events",
+			"time": 387,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 300ms": false,
+				"Событие в расписании": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 300ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Событие в расписании": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				387
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 300ms": false,
+					"Событие в расписании": true
+				}
+			]
+		},
+		{
+			"id": "90fcc7cf-cfc5-48f9-8b40-8d4a8f14ed48",
+			"name": "[04]Создание личного события с минимальной длительностью",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/createPersonal",
+			"time": 168,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 (OK)": true,
+				"eventId saved to variable": true,
+				"startAt saved to variable": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 (OK)": {
+					"pass": 1,
+					"fail": 0
+				},
+				"eventId saved to variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"startAt saved to variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				168
+			],
+			"allTests": [
+				{
+					"Status code is 200 (OK)": true,
+					"eventId saved to variable": true,
+					"startAt saved to variable": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "a4d30d5e-f409-45ab-b209-032d042fb1f5",
+			"name": "Получение расписания для события с min длительностью",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/events",
+			"time": 540,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 300ms": false,
+				"Событие в расписании": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 300ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Событие в расписании": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				540
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 300ms": false,
+					"Событие в расписании": true
+				}
+			]
+		},
+		{
+			"id": "8202c6a8-ef03-4942-bfde-1410b8a26958",
+			"name": "[05]Создание личного события с максимальной длительностью",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/createPersonal",
+			"time": 200,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 (OK)": true,
+				"eventId saved to variable": true,
+				"startAt saved to variable": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 (OK)": {
+					"pass": 1,
+					"fail": 0
+				},
+				"eventId saved to variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"startAt saved to variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				200
+			],
+			"allTests": [
+				{
+					"Status code is 200 (OK)": true,
+					"eventId saved to variable": true,
+					"startAt saved to variable": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "3fde2ede-a11a-40a3-a964-75f398727e59",
+			"name": "Получение расписания для события с max длительностью",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/events",
+			"time": 445,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 300ms": false,
+				"Событие в расписании": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 300ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Событие в расписании": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				445
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 300ms": false,
+					"Событие в расписании": true
+				}
+			]
+		},
+		{
+			"id": "5b8167b2-ef30-46d8-b178-2e7781a29cc1",
+			"name": "[06]Изменение существующего личного события",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/updatePersonal",
+			"time": 232,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 (OK)": true,
+				"eventId saved to variable": true,
+				"startAt saved to variable": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 (OK)": {
+					"pass": 1,
+					"fail": 0
+				},
+				"eventId saved to variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"startAt saved to variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				232
+			],
+			"allTests": [
+				{
+					"Status code is 200 (OK)": true,
+					"eventId saved to variable": true,
+					"startAt saved to variable": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "12dbd78f-9f10-4987-b890-ef667dffc7a7",
+			"name": "Получение расписания для изменённого события",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/events",
+			"time": 429,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 300ms": false,
+				"Событие в расписании": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 300ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Событие в расписании": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				429
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 300ms": false,
+					"Событие в расписании": true
+				}
+			]
+		},
+		{
+			"id": "431d2230-db5e-4694-b834-6c7f20489e5f",
+			"name": "[07]Удаление созданного события",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/removePersonal",
+			"time": 151,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 500ms": true,
+				"Status code is 200 (OK)": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200 (OK)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				151
+			],
+			"allTests": [
+				{
+					"Response time is less than 500ms": true,
+					"Status code is 200 (OK)": true
+				}
+			]
+		},
+		{
+			"id": "20880c67-f538-40d5-9f33-4db220172dee",
+			"name": "Получение расписания после удаления события",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/events",
+			"time": 472,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 300ms": false,
+				"Проверка отсутствия события": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 300ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Проверка отсутствия события": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				472
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 300ms": false,
+					"Проверка отсутствия события": true
+				}
+			]
+		},
+		{
+			"id": "196bb056-a75d-4746-abf6-2100b29b3a1c",
+			"name": "[08]Создание личного события с максимальным количеством символов в названия (40 символов)",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/createPersonal",
+			"time": 165,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 (OK)": true,
+				"eventId saved to variable": true,
+				"startAt saved to variable": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 (OK)": {
+					"pass": 1,
+					"fail": 0
+				},
+				"eventId saved to variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"startAt saved to variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				165
+			],
+			"allTests": [
+				{
+					"Status code is 200 (OK)": true,
+					"eventId saved to variable": true,
+					"startAt saved to variable": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "5e51b34a-3264-4a1a-b2a0-07622cd84348",
+			"name": "Получение расписания для события с максимальным кол-вом символов в названии",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/events",
+			"time": 488,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 300ms": false,
+				"Событие в расписании": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 300ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Событие в расписании": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				488
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 300ms": false,
+					"Событие в расписании": true
+				}
+			]
+		},
+		{
+			"id": "c97bfe9f-3fbc-41f5-a62c-77f3258d025b",
+			"name": "[09]Создание личного события с цифрами + спецсимволами + кириллица + латиница",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/createPersonal",
+			"time": 201,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 (OK)": true,
+				"eventId saved to variable": true,
+				"startAt saved to variable": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 (OK)": {
+					"pass": 1,
+					"fail": 0
+				},
+				"eventId saved to variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"startAt saved to variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				201
+			],
+			"allTests": [
+				{
+					"Status code is 200 (OK)": true,
+					"eventId saved to variable": true,
+					"startAt saved to variable": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "b9b6b26b-f630-4277-a93f-0c5d91815e9c",
+			"name": "Получение расписания для события с цифрами + спецсимволами + кириллицей + латиницей",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/events",
+			"time": 459,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 300ms": false,
+				"Событие в расписании": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 300ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Событие в расписании": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				459
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 300ms": false,
+					"Событие в расписании": true
+				}
+			]
+		},
+		{
+			"id": "67b529b8-8da2-4241-9857-8f7a12b22cc4",
+			"name": "[10]Изменение описания созданного события с добавлением ссылки",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/updatePersonal",
+			"time": 191,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 (OK)": true,
+				"eventId saved to variable": true,
+				"startAt saved to variable": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 (OK)": {
+					"pass": 1,
+					"fail": 0
+				},
+				"eventId saved to variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"startAt saved to variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				191
+			],
+			"allTests": [
+				{
+					"Status code is 200 (OK)": true,
+					"eventId saved to variable": true,
+					"startAt saved to variable": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "456ace0c-4ffc-48f9-b1da-09e6ff5c3f64",
+			"name": "Получение расписания для события с добавлением ссылки",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/events",
+			"time": 563,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 300ms": false,
+				"Событие в расписании": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 300ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Событие в расписании": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				563
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 300ms": false,
+					"Событие в расписании": true
+				}
+			]
+		},
+		{
+			"id": "ffe9740d-2491-436a-ba31-2a8594141c9a",
+			"name": "[11]Создание личного события с минимальным количеством символов в названия (1 символ)",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/createPersonal",
+			"time": 187,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 (OK)": true,
+				"eventId saved to variable": true,
+				"startAt saved to variable": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 (OK)": {
+					"pass": 1,
+					"fail": 0
+				},
+				"eventId saved to variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"startAt saved to variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				187
+			],
+			"allTests": [
+				{
+					"Status code is 200 (OK)": true,
+					"eventId saved to variable": true,
+					"startAt saved to variable": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "e388273d-cb21-4400-9403-fc6fa4c60fe4",
+			"name": "Получение расписания для события с минимальным кол-вом символов в названии",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/events",
+			"time": 683,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 300ms": false,
+				"Событие в расписании": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 300ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Событие в расписании": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				683
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 300ms": false,
+					"Событие в расписании": true
+				}
+			]
+		},
+		{
+			"id": "d56776ed-29bf-41e2-af83-9cb6941e356d",
+			"name": "[12]Получение списка расписания за полный месяц",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/events",
+			"time": 1008,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 (OK)": true,
+				"Response time is less than 300ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200 (OK)": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 300ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				1008
+			],
+			"allTests": [
+				{
+					"Status code is 200 (OK)": true,
+					"Response time is less than 300ms": false
+				}
+			]
+		},
+		{
+			"id": "0919ecb1-a880-4926-8fbb-62207612847d",
+			"name": "[13]Создание личного события в будущем с валидной датой в високосный год",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/createPersonal",
+			"time": 50,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 (OK)": true,
+				"eventId saved to variable": false,
+				"startAt saved to variable": false,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 (OK)": {
+					"pass": 1,
+					"fail": 0
+				},
+				"eventId saved to variable": {
+					"pass": 0,
+					"fail": 1
+				},
+				"startAt saved to variable": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				50
+			],
+			"allTests": [
+				{
+					"Status code is 200 (OK)": true,
+					"eventId saved to variable": false,
+					"startAt saved to variable": false,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "8b1d47b8-3bfb-4ec8-8a5e-af917508b353",
+			"name": "Получение расписания для события в 2028 году",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/events",
+			"time": 550,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 300ms": false,
+				"Событие в расписании": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 300ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Событие в расписании": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				550
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 300ms": false,
+					"Событие в расписании": false
+				}
+			]
+		},
+		{
+			"id": "ba7e2279-0e3f-423e-a58c-252c50690d22",
+			"name": "[14]Создание личного события в прошлом с валидной датой в високосный год",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/createPersonal",
+			"time": 170,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 (OK)": true,
+				"eventId saved to variable": true,
+				"startAt saved to variable": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 (OK)": {
+					"pass": 1,
+					"fail": 0
+				},
+				"eventId saved to variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"startAt saved to variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				170
+			],
+			"allTests": [
+				{
+					"Status code is 200 (OK)": true,
+					"eventId saved to variable": true,
+					"startAt saved to variable": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "cc0b7829-0d2b-4a9f-b506-b1aae5bca06c",
+			"name": "Получение расписания для события в 2024 году",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/events",
+			"time": 456,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 300ms": false,
+				"Событие в расписании": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 300ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Событие в расписании": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				456
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 300ms": false,
+					"Событие в расписании": false
+				}
+			]
+		},
+		{
+			"id": "51610df7-233e-4558-8c54-d7c47be7ac1e",
+			"name": "[15]Создание личного события с недопустимым количеством символов в названии (41 символ)",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/createPersonal",
+			"time": 51,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 (OK)": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 (OK)": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				51
+			],
+			"allTests": [
+				{
+					"Status code is 200 (OK)": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "313231ef-a28c-4ad2-9d93-8dd84b5d9ef0",
+			"name": "Получение расписания для события с недопустимым кол-вом символов в названии",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/events",
+			"time": 456,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 300ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 300ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				456
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 300ms": false
+				}
+			]
+		},
+		{
+			"id": "7a4aacf1-5785-4af2-8f6f-d387d742b12e",
+			"name": "[16]Создание личного события с недопустимой длительностью",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/createPersonal",
+			"time": 157,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 (OK)": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 (OK)": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				157
+			],
+			"allTests": [
+				{
+					"Status code is 200 (OK)": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "ebec96e4-4d4c-4ec3-a1cf-4504b93d88f2",
+			"name": "Получение расписания для события с недопустимой длительностью события",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/events",
+			"time": 60031,
+			"responseCode": {
+				"code": 504,
+				"name": "Gateway Time-out"
+			},
+			"tests": {
+				"Status code is 200": false,
+				"Response time is less than 300ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 300ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				60031
+			],
+			"allTests": [
+				{
+					"Status code is 200": false,
+					"Response time is less than 300ms": false
+				}
+			]
+		},
+		{
+			"id": "e7fdfcdb-2916-4e35-bbd1-34be2d22646a",
+			"name": "[17]Создание личного события с не валидной датой",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/createPersonal",
+			"time": 136,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 (OK)": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 (OK)": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				136
+			],
+			"allTests": [
+				{
+					"Status code is 200 (OK)": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "08206f9e-e09f-4fbe-83bb-0bf3a58d3229",
+			"name": "Получение расписания для события с не валидной датой",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/events",
+			"time": 466,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 300ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 300ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				466
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 300ms": false
+				}
+			]
+		},
+		{
+			"id": "103bd433-bba6-4c02-9a3d-2e0d6dfb3af5",
+			"name": "[18]Создание личного события с использованием не валидного токена авторизации",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/createPersonal",
+			"time": 46,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code is 401": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				46
+			],
+			"allTests": [
+				{
+					"Status code is 401": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "0525d008-8503-4054-91c3-aa87cb392a6f",
+			"name": "Получение расписания после попытки создания события с некорректным токеном",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/events",
+			"time": 480,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 300ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 300ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				480
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 300ms": false
+				}
+			]
+		},
+		{
+			"id": "54d737cc-c4fe-4091-9403-4db30f479bb8",
+			"name": "[19]Создание личного события без названия",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/createPersonal",
+			"time": 46,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 (OK)": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 (OK)": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				46
+			],
+			"allTests": [
+				{
+					"Status code is 200 (OK)": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "082aca37-32fc-441e-9c5f-3542c8e3b068",
+			"name": "Получение расписания для события без названия",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/events",
+			"time": 431,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 300ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 300ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				431
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 300ms": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 72099,
+	"collection": {
+		"requests": [
+			{
+				"id": "592e3e64-ca52-4d37-a8ac-f9716fd10573",
+				"method": "POST"
+			},
+			{
+				"id": "e4683e1d-e6d0-46c9-a15f-2ca68ddbb444",
+				"method": "POST"
+			},
+			{
+				"id": "b3f582c1-0be5-406e-b675-76e6d21b7b75",
+				"method": "POST"
+			},
+			{
+				"id": "f626079a-ec64-410a-879c-41678ef4f491",
+				"method": "POST"
+			},
+			{
+				"id": "5d4f52a4-71a9-4d9c-be92-3ffa714090b7",
+				"method": "POST"
+			},
+			{
+				"id": "7b649665-86ab-48f2-8d31-d0f8e2c79f2a",
+				"method": "POST"
+			},
+			{
+				"id": "90fcc7cf-cfc5-48f9-8b40-8d4a8f14ed48",
+				"method": "POST"
+			},
+			{
+				"id": "a4d30d5e-f409-45ab-b209-032d042fb1f5",
+				"method": "POST"
+			},
+			{
+				"id": "8202c6a8-ef03-4942-bfde-1410b8a26958",
+				"method": "POST"
+			},
+			{
+				"id": "3fde2ede-a11a-40a3-a964-75f398727e59",
+				"method": "POST"
+			},
+			{
+				"id": "5b8167b2-ef30-46d8-b178-2e7781a29cc1",
+				"method": "POST"
+			},
+			{
+				"id": "12dbd78f-9f10-4987-b890-ef667dffc7a7",
+				"method": "POST"
+			},
+			{
+				"id": "431d2230-db5e-4694-b834-6c7f20489e5f",
+				"method": "POST"
+			},
+			{
+				"id": "20880c67-f538-40d5-9f33-4db220172dee",
+				"method": "POST"
+			},
+			{
+				"id": "196bb056-a75d-4746-abf6-2100b29b3a1c",
+				"method": "POST"
+			},
+			{
+				"id": "5e51b34a-3264-4a1a-b2a0-07622cd84348",
+				"method": "POST"
+			},
+			{
+				"id": "c97bfe9f-3fbc-41f5-a62c-77f3258d025b",
+				"method": "POST"
+			},
+			{
+				"id": "b9b6b26b-f630-4277-a93f-0c5d91815e9c",
+				"method": "POST"
+			},
+			{
+				"id": "67b529b8-8da2-4241-9857-8f7a12b22cc4",
+				"method": "POST"
+			},
+			{
+				"id": "456ace0c-4ffc-48f9-b1da-09e6ff5c3f64",
+				"method": "POST"
+			},
+			{
+				"id": "ffe9740d-2491-436a-ba31-2a8594141c9a",
+				"method": "POST"
+			},
+			{
+				"id": "e388273d-cb21-4400-9403-fc6fa4c60fe4",
+				"method": "POST"
+			},
+			{
+				"id": "d56776ed-29bf-41e2-af83-9cb6941e356d",
+				"method": "POST"
+			},
+			{
+				"id": "0919ecb1-a880-4926-8fbb-62207612847d",
+				"method": "POST"
+			},
+			{
+				"id": "8b1d47b8-3bfb-4ec8-8a5e-af917508b353",
+				"method": "POST"
+			},
+			{
+				"id": "ba7e2279-0e3f-423e-a58c-252c50690d22",
+				"method": "POST"
+			},
+			{
+				"id": "cc0b7829-0d2b-4a9f-b506-b1aae5bca06c",
+				"method": "POST"
+			},
+			{
+				"id": "51610df7-233e-4558-8c54-d7c47be7ac1e",
+				"method": "POST"
+			},
+			{
+				"id": "313231ef-a28c-4ad2-9d93-8dd84b5d9ef0",
+				"method": "POST"
+			},
+			{
+				"id": "7a4aacf1-5785-4af2-8f6f-d387d742b12e",
+				"method": "POST"
+			},
+			{
+				"id": "ebec96e4-4d4c-4ec3-a1cf-4504b93d88f2",
+				"method": "POST"
+			},
+			{
+				"id": "e7fdfcdb-2916-4e35-bbd1-34be2d22646a",
+				"method": "POST"
+			},
+			{
+				"id": "08206f9e-e09f-4fbe-83bb-0bf3a58d3229",
+				"method": "POST"
+			},
+			{
+				"id": "103bd433-bba6-4c02-9a3d-2e0d6dfb3af5",
+				"method": "POST"
+			},
+			{
+				"id": "0525d008-8503-4054-91c3-aa87cb392a6f",
+				"method": "POST"
+			},
+			{
+				"id": "54d737cc-c4fe-4091-9403-4db30f479bb8",
+				"method": "POST"
+			},
+			{
+				"id": "082aca37-32fc-441e-9c5f-3542c8e3b068",
+				"method": "POST"
+			}
+		]
+	}
+}
