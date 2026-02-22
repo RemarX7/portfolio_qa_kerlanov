@@ -225,33 +225,50 @@ API тестирование
 | BUG 7 | 7. Отсутствует валидация цвета событий — можно указать любой HEX вместо разрешённых значений | Высокий | S3 |
 | BUG 8 | 8. Отсутствие валидации по длительности личного события при его создании | Средний | S3 |
 
-1. BUG — <https://printskrin.ru/i/OTcOO8>
-   Скриншот бага: <https://printskrin.ru/i/OTwvB8>
-   
-3. BUG — <https://printskrin.ru/i/OTcM2Y>
-   Скриншот бага: <https://printskrin.ru/i/OTD2zq>
-   
-4. BUG — <https://printskrin.ru/i/OTcN6b>
-   Скриншот бага: <https://printskrin.ru/i/ONQpgN>
-   
-5. BUG — <https://printskrin.ru/i/OTcgVH>  
-   Скриншот бага: [https://printskrin.ru/i/OTcOO8](https://printskrin.ru/i/ONQhsU)
+<details open>
+  <summary>🐛1. BUG — скриншот баг-репорта </summary>
 
-5\. BUG — Скриншот бага:
+  <img width="647" height="642" alt="image" src="https://github.com/user-attachments/assets/1fccad20-3fc8-4cfe-8c9a-069ebe678e1e" />
+</details>
+   
+<details open>
+  <summary> 2. BUG — скриншот баг-репорта </summary>
+   <img width="563" height="477" alt="image" src="https://github.com/user-attachments/assets/7f60fc05-f8a0-4abf-8bf7-71a3c74e870f" />
+</details>
+   
+<details open>
+  <summary> 5. BUG — скриншот баг-репорта </summary>
+   <img width="593" height="593" alt="image" src="https://github.com/user-attachments/assets/ab6ac3f1-9f8a-4d72-833c-b116e3285e40" />
+</details>
+
+<details open>
+  <summary> 7. BUG — скриншот баг-репорта </summary>
+   <img width="603" height="581" alt="image" src="https://github.com/user-attachments/assets/3d9e7107-ca87-458f-ab9e-9ed74cd32bb5" />
+</details>
+
+<details open>
+  <summary> 5. BUG — Скриншот бага и баг-репорта: </summary>
 <img width="1263" height="741" alt="image" src="https://github.com/user-attachments/assets/45ef7493-0d41-44a5-b1be-ca70810cf1d7" />
 <img width="814" height="828" alt="image" src="https://github.com/user-attachments/assets/ac451b96-3188-4826-9772-9fb88a828333" />
+</details>
 
-6\. BUG — Скриншот бага 
+<details open>
+  <summary> 6. BUG — Скриншот бага и баг-репорта </summary>
 <img width="1160" height="788" alt="image" src="https://github.com/user-attachments/assets/8b76417c-e72b-45ad-bb01-7e06096a825e" />
 <img width="360" height="771" alt="image" src="https://github.com/user-attachments/assets/3fd735b8-8d62-47c4-ac7d-9121f30bdc88" />
- 
-7\. BUG — Скриншот бага:
+</details>
+
+<details open>
+  <summary> 7. BUG — Скриншот бага и баг-репорта </summary>
 <img width="1181" height="787" alt="image" src="https://github.com/user-attachments/assets/8f0bbd10-fa20-4756-b574-f85b5cd9a9c3" />
 <img width="368" height="678" alt="image" src="https://github.com/user-attachments/assets/8f14253b-f81a-4ba0-9463-6fa67c333906" />
+</details>
 
-8\. BUG — Скриншот бага:
+<details open>
+  <summary> 8. BUG — Скриншот бага и баг-репорта </summary>
 <img width="1336" height="861" alt="image" src="https://github.com/user-attachments/assets/5483d824-cd1b-4e7d-8105-051e3dcc3f75" />
 <img width="364" height="660" alt="image" src="https://github.com/user-attachments/assets/620856df-28d4-4f12-a3f4-a483eb65e0b4" />
+</details>
 
 ## *5. Выводы и рекомендации:*
 
