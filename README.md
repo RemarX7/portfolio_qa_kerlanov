@@ -11,11 +11,11 @@ QA-инженер с фокусом на обеспечение качества
 - **Документирование** — оформляю баг-репорты, чек-листы и тест-кейсы  
 
 ## 🛠 С чем работаю
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)  
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)  
-![JMeter](https://img.shields.io/badge/JMeter-D22128?style=for-the-badge&logo=apache-jmeter&logoColor=white)  
-![REST API](https://img.shields.io/badge/REST%20API-02569B?style=for-the-badge&logo=swagger&logoColor=white)  
-![Charles](https://img.shields.io/badge/Charles-4B8BBE?style=for-the-badge&logo=charles&logoColor=white)  
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![JMeter](https://img.shields.io/badge/JMeter-D22128?style=for-the-badge&logo=apache-jmeter&logoColor=white)
+![REST API](https://img.shields.io/badge/REST%20API-02569B?style=for-the-badge&logo=swagger&logoColor=white)
+![Charles](https://img.shields.io/badge/Charles-4B8BBE?style=for-the-badge&logo=charles&logoColor=white)
 
 - **PostgreSQL** — пишу запросы для проверки данных  
 - **Postman** — создаю коллекции, тестирую API  
